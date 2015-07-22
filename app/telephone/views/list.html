@@ -1,0 +1,13 @@
+<div>
+    <div infinite-scroll='nextPage()' infinite-scroll-disabled='page.currentPage==page.totalPage+1' infinite-scroll-distance='1'>
+		<div class="activity_list"  ng-repeat="act in acts" ng-click="share(act.id)">
+		     <img ng-src="{{act.img}}">
+		     <ul>
+		        <li>{{act.name}}</li>
+		        <li>{{act.activityInfo}}</li>
+		        <li>{{act.address}}</li>
+		     </ul>
+		</div>
+		<div ng-show='page.currentPage!=page.totalPage+1' class="loadData">Loading data...</div>
+	</div>
+</div>

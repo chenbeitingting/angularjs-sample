@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+	<title>分享后台管理系统</title>
+  	<link class="bootstrap library" rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"> 
+    <link rel="stylesheet" type="text/css" href="/pc/css/style.css">
+<!--
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="/pc/js/app.js"></script>
+  <script src="/pc/js/controllers.js"></script>
+  <script src="/pc/js/services.js"></script>
+  <script src="/pc/js/directive.js"></script>
+  <script src="/pc/js/filters.js"></script>-->
+  <script src="/pc/minified/js/main.min.js"></script>
+  <script type="text/javascript" src="bower_components/My97DatePickerBeta/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body  ng-app="shareApp">
+    <div class="navbar">
+        <div class="navbar-inner">
+                <ul class="nav pull-right">  
+                    <li><a href="#" class="hidden-phone visible-tablet visible-desktop" role="button"></a></li>
+                    <li id="fat-menu" class="dropdown">
+                        <a role="button" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-user"></i><img src="/pc/images/admin.png" style="width: 18px; margin-right: 10px;margin-left: 10px;">admin
+                            <i class="icon-caret-down"></i>
+                        </a>
+                    </li>
+                </ul>
+                <a class="brand" href="index.html"><span class="first"></span> <span class="second">分享后台管理系统</span></a>
+        </div>
+    </div>
+    <div class="sidebar-nav">
+          <div>
+              <a class="nav-header collapsed"><img src="/pc/images/guanli.png" style="width: 14px;margin-right: 5px;">活动管理</a>
+              <ul id="dashboard-menu" class="nav nav-list in">
+                  <li class="nav-list-bg" some-attr="/index" catalogue-click><a>新增活动</a></li>
+                  <li  some-attr="/list"  catalogue-click><a>活动列表</a></li>      
+              </ul>     
+          </div>
+    </div>
+    <div class="content">
+        <div ng-view class="view-frame">
+     
+        </div>
+    </div>
+    <div class="wrongMsg"  ng-show="error" > 
+        <div class="wrongBox" ng-show="error" >
+           <h1>提示框</h1>
+           <div>{{errorMassage}}</div>
+           <div><button class="wrongbtn" ng-click="hideBox()">知道了</button></div>
+        </div>
+    </div>
+     <div ui-view></div>
+
+<script type="text/javascript">
+ /*  $(function(){
+       $(".collapsed").click(function(){
+           var nextUl=$(this).next("ul");
+           if(nextUl.is(":hidden")){
+                nextUl.show(400);
+           }else{
+                nextUl.hide(400);
+           }    
+       });
+    });*/
+      
+
+    function mouseover(e){
+          var imgSrc= $(e.target).attr("src-attr");
+          console.log(imgSrc);
+          var tooltip = "<div id='tooltip'><img src='"+ imgSrc +"' alt='预览图'/><\/div>"; //创建 div 元素
+          $("body").append(tooltip);       
+          $("#tooltip")
+           .css({
+              "top": (e.pageY) + "px",
+              "left":  (e.pageX)  + "px"
+           }).show("fast");   //设置x坐标和y坐标，并且显示
+        };
+    function mouseout (argument) {
+      //this.title = this.imgTitle; 
+          $("#tooltip").remove();  
+    }
+</script>
+</body>
+</html>

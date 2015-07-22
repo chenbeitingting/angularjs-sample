@@ -1,0 +1,40 @@
+ <div class="panel" id="panel1" data-load="init_page"   data-header="none">
+             <div id="panel1_scroll">
+               <div id="panel1_body">
+                 <div id="activity_img"  class="animateCss">  
+                   <a class="slider-item" href="javascript:void(0)">
+                     <img ng-src="{{act.img}}">
+                   </a>
+                 </div>
+                 <div id="activity_content">
+                   <div class="describe">
+                     {{act.name}}
+                   </div>
+                   <div class="title"><e></e>活动信息</div>
+                   <div class="activity_address">
+                     <img src="../telephone/images/Event_16.png">
+                     <div>活动地址</div>
+                     <div>{{act.address}}</div>
+                   </div>
+                   <div class="activity_address">
+                     <img src="../telephone/images/Event_20.png">
+                     <div>活动时间</div>
+                     <div>{{act.startTime | date:'yyyy/MM/dd'}}至{{act.endTime | date:'yyyy/MM/dd'}}</div>
+                   </div>
+                   <div class="activity_address">
+                     <img src="../telephone/images/Event_27.png">
+                     <div>活动票价</div>
+                     <div>会员价格{{act.price}}元/人</div>
+                   </div>
+                   <div class="activity_address" id="tel">
+                     <img src="../telephone/images/telephone.png">
+                     <div>咨询电话</div>
+                     <div ><a href="tel:{{act.telephone}}">{{act.telephone}}</a></div>
+                   </div>
+                    <div class="title infomation"><e></e>活动详情</div>
+                   <div class="div_content">{{act.activityInfo}}</div>
+                 </div>
+               </div>
+             </div>
+            
+</div>

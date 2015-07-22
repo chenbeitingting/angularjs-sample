@@ -1,0 +1,144 @@
+*{margin: 0px; padding: 0px; font-size:14px; color: #787878; line-height: 24px; font-size: 14px;}
+header{height: 44px;width: 100%;background-color: #ff7e6d; position: fixed; top: 0px;z-index: 1000;text-align: center; line-height: 44px;vertical-align: middle;}
+header >img{width: 24px; position: absolute;left: 10px; top:8px;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+header > div{ display: inline-block; color: white; font-size: 20px;}
+   .scroll_container {width: 100%;height: 100%;overflow: hidden;}
+   #afui .panel{padding: 0px;}
+   #panel1_body{overflow: hidden;}
+   #activity_img{height: 160px;display: -webkit-box; position: relative; left: 0px;}
+   #quota{ background-color: #4a4a4a; position: absolute;top: 22px; right: 15px; border-radius: 20px; color: white;height: 34px; line-height: 34px; vertical-align: middle; text-align: center; width: 100px; z-index: 1000; opacity: 0.75;}
+   #quota e{ margin-left: 9px;color: white;}
+   .slider-item {display: block;width:100%;height: 100%;}
+   #activity_img img{ width: 100%;height: 160px;}
+   .bar_wrap {width: 100%;height: 18px;position: absolute;top: 144px;left: 0;right: 0;z-index: 20;text-align: center;}
+   #bar_wrap_btns {display: inline-block;padding: 0 4px;min-width: 58px;height: 18px;overflow: hidden;text-align: center;border-radius: 10px;}
+   .btnsli{display: inline-block;margin: 5px 3px;width: 8px;height: 8px;background: #968e86;opacity: .3;border-radius: 5px;
+cursor: pointer;box-shadow: 0 0 1px 1px #fff;}
+.cur {opacity: .8;background: #fff;}
+  #activity_content{background-color:#f4f4f4;}
+  .describe{color: #333333; padding: 17px 20px;}
+  #activity_content > img{ width: 100%;height: 55px;}
+   .activity_address{border-bottom: 1px solid #d9d9d9;padding: 0px 20px; background-color: white;display:-webkit-box; -webkit-box-orient:horizontal; -webkit-box-align:center; position: relative;min-height: 43px;}
+  .activity_address > img{ width: 16px; margin-right: 10px; margin-top: 5px;}
+  .activity_address > div:last-child{margin: 10px 82px 10px 20px; color: #333333; line-height: 22px;}
+  .infomation{margin: 12px 0px 5px 0px;}
+
+  .submit{ background-color:#ff7e6d; margin: 5px 20px; height: 40px;line-height: 40px;vertical-align: middle; border-radius: 4px; text-align: center; color: white; font-size:18px;}
+  .submit_unable{ background-color:#BDBDBD; margin: 2px 20px; height: 40px;line-height: 40px;vertical-align: middle; border-radius: 4px; text-align: center; color: white; font-size:18px;}
+  #afui .footer{ border:0px; background-color: white; border: 0px;}
+  #afui > #navbar{ background-color: white; border: 0px;}
+  .hidec{display: none;}
+  .div_content{ margin: 0px 20px; padding-bottom: 10px;}
+  .div_content img{ width: 100%;}
+  .div_content p{padding: 0px;margin: 0px;}
+  a{text-decoration: none;}
+  .title{height: 44px; line-height: 44px; margin-bottom: 10px;font-size:16px; font-weight: bold;color:#ff7e6d; background-color: white;padding-left: 20px;position: relative;padding-left: 35px; }
+  .title e{width: 6px;
+height: 22px;
+background-color: #ff7e6d;display: inline-block;margin-right: 7px;border-radius: 5px;top: 10px;position: absolute;left: 20px;}
+footer{position: fixed;z-index: 10;bottom: 0px; left: 0px; right: 0px; background-color: white;}
+ .animateCss{transition: left 0.4s ease 0s;}
+ .more{position: fixed;
+  bottom: 20px;
+  right: 10px;
+  background-color:#ff7e6d;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 50px;
+  color: white;z-index: 10;font-size: 8px;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+
+  body {font-family: '微软雅黑';font-size: 13px;color: #787878;}
+/* 统一样式 */
+a {
+  text-decoration: none;
+}
+#content{padding: 0px 14px; margin-top: 44px;}
+#panel1{margin:0px -20px;}
+.activity_list{ height: 110px; width: 100%;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+.help_list > img,.activity_list > img{width: 90px;height: 90px; margin-top: 10px; float: left; margin-right:10px;border-radius: 4px; }
+.help_list,.activity_list{border-bottom: 1px solid #eee;}
+.help_list ul,.activity_list ul{height: 90px; padding-top: 10px;}
+.help_list ul li,.activity_list ul li{line-height: 22px;height: 22px;overflow: hidden;}
+.help_list ul li:first-child,.activity_list ul li:first-child{color: #333333; font-size: 15px;}
+ .activity_list ul li:first-child{height: 24px; overflow: hidden; }
+ .activity_list ul li:nth-child(2),#fit_me .activity_list ul li:nth-child(2){height: 46px; overflow: hidden;}
+.activity_list ul li:nth-child(2){height: 46px; overflow: hidden;}
+.activity_list ul li:nth-child(2),.help_list ul li:nth-child(2){color: #787878;}
+.activity_list ul li:nth-child(3),.help_list ul li:nth-child(3){color: #7abbf8; font-size: 12px;}
+
+
+.loadData{ text-align: center;color:#7abbf8; }
+
+.view-container {
+   position: relative;
+   overflow: hidden;
+   width: 100%;display: block;
+}
+.view-frame,.back{overflow-x:hidden;}
+.view-frame,.back{
+    transition-timing-function: ease;
+    -webkit-transition-timing-function: ease;
+    transition-duration: 350ms;
+    -webkit-transition-duration: 350ms;
+}
+
+
+.view-frame.ng-enter {
+    -webkit-transition-property: none;
+    transition-property: none;
+    transform: translate3d(100%,0,0);
+    -webkit-transform: translate3d(100%,0,0);
+}
+
+.view-frame.ng-enter.ng-enter-active {
+  -webkit-transition-property: all;
+  -webkit-transform: translate3d(0,0,0);
+    transition-property: all;
+    transform: translate3d(0,0,0);
+}
+
+.view-frame.ng-leave {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.view-frame.ng-leave.ng-leave-active {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+}
+
+.back.ng-enter {
+    -webkit-transition-property: none;
+    transition-property: none;
+    transform: translate3d(-100%,0,0);
+    -webkit-transform: translate3d(-100%,0,0);
+}
+
+.back.ng-enter.ng-enter-active {
+  -webkit-transition-property: all;
+  -webkit-transform: translate3d(0,0,0);
+    transition-property: all;
+    transform: translate3d(0,0,0);
+}
+
+.back.ng-leave {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+.back.ng-leave.ng-leave-active {
+    -webkit-transition-property: all;
+    transition-property: all;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+}
+

@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="shareApp">
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+  <meta content="width=device-width, height=100,initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta content="false" id="twcClient" name="twcClient" />
+  <meta name="format-detection" content="email=no" />
+  <title ng-bind="title"></title>
+  <link rel="stylesheet" type="text/css" href="../telephone/css/style.css">
+ <!--
+  <script src="../bower_components/jquery-1.11.2.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-route/angular-route.js"></script>
+  <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+  <script src="../bower_components/angular-resource/angular-resource.js"></script>
+  <script type="text/javascript" src="../bower_components/ngInfiniteScroll-1.0.0/ngInfiniteScroll-1.0.0/build/ng-infinite-scroll.js"></script>
+  <script src="../telephone/js/app.js"></script>
+  <script src="../telephone/js/controllers.js"></script>
+  <script src="../telephone/js/services.js"></script>-->
+
+  <script type="text/javascript" src="/telephone/minified/js/main.min.js"></script>
+
+</head>
+<body>
+  <img style="z-index:-1;position:fixed;top:0;left:0;" width="0" height="0" ng-src="{{shareImg}}">
+  <div id="afui" class="view-container">
+        <header>
+           <img src="../telephone/images/back_white2.png" ng-click="back()">
+           <div ng-bind="title"></div>
+       </header>
+       <div id="content"  ng-view ng-class="pageAnimationClass">
+  	       
+       </div>
+       <div class="more" ng-show='list==false' ng-click="activityList()">more</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for ./app/pc/js/controllers.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">./app/pc/js/controllers.js</span></h1>
+    <h2>
+        Statements: <span class="metric">36.27% <small>(37 / 102)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">28.95% <small>(11 / 38)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">25.93% <small>(7 / 27)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">36.27% <small>(37 / 102)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">./app/pc/js/</a> &#187; controllers.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @class js.modules.myAppCtrl
+ * @descripeThe main share app controller module
+ * @type{angular.module}
+ */
+var myAppCtrl=angular.module('myAppCtrl',[]);
+myAppCtrl.run(['$rootScope',function($rootScope){
+     /**
+    *@desc 是否显示错误弹出框
+    */
+    $rootScope.error=false;
+     /**
+    *@desc 是否显示错误提示字段
+    */
+    $rootScope.errorMassage="";
+    /**
+    * @method hideBox -隐藏错误提示框
+    *@desc 是否显示错误提示字段
+    */
+    $rootScope.hideBox=<span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >         $rootScope.error=false;</span>
+<span class="cstat-no" title="statement not covered" >         $rootScope.errorMassage="";</span>
+    };
+}]);
+&nbsp;
+  /**
+ * @class js.modules.myAppCtrl.addActCtrl - This controls add a acticity
+ * @param {Object} $scope - The current scope
+ * @param {Object} loginService - The service
+ * @param {Object} $location
+ * @example &lt;div ng-controller="addActCtrl"&gt;&lt;/div&gt;
+ */
+myAppCtrl.controller('addActCtrl',['$scope','loginService','$location','$rootScope',function($scope,loginService,$location,$rootScope){
+    	 /**
+      *@desc 活动详情字段
+      */
+      $scope.act={name:"",img:"../pc/images/img_up.jpg",address:"",price:"",telephone:"",activityInfo:"",id:"",startTime:"",endTime:""};
+    	$scope.act.id=$location.search()['id'];
+&nbsp;
+      /**
+      *@method get a activity info
+      */
+     loginService.getActivity({id:$scope.act.id},function(succ){
+            <span class="missing-if-branch" title="else path not taken" >E</span>if(succ.code == 0){
+                 succ.data[0]?$scope.act=succ.data[0]:<span class="branch-1 cbranch-no" title="branch not covered" >$scope.act;</span>
+            }else{
+<span class="cstat-no" title="statement not covered" >                 $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                 $rootScope.errorMassage="查询出错";</span>
+            }
+        },<span class="fstat-no" title="function not covered" >function(error){</span>
+<span class="cstat-no" title="statement not covered" >                $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                $rootScope.errorMassage="请求异常";</span>
+        });
+&nbsp;
+    /**
+    *@method addActivity - add a new activity
+    */
+	 $scope.addActivity=<span class="fstat-no" title="function not covered" >function(){</span>
+         /**
+      *@desc 是否操作成功字段
+      */
+<span class="cstat-no" title="statement not covered" >	 	    $scope.addSuccess=false;</span>
+<span class="cstat-no" title="statement not covered" >         if($scope.act.id){//修改</span>
+<span class="cstat-no" title="statement not covered" >              loginService.modifyActivity({data:$scope.act},<span class="fstat-no" title="function not covered" >function(succ){</span></span>
+<span class="cstat-no" title="statement not covered" >                  if(succ.code==0){</span>
+<span class="cstat-no" title="statement not covered" >                      $scope.addSuccess=true;</span>
+                  }else{
+<span class="cstat-no" title="statement not covered" >                       $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                       $rootScope.errorMassage="查询出错";</span>
+                  }
+              },<span class="fstat-no" title="function not covered" >function(error){</span>
+<span class="cstat-no" title="statement not covered" >                    $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                    $rootScope.errorMassage="请求异常";</span>
+              });
+          }else{//新增
+<span class="cstat-no" title="statement not covered" >              loginService.add({data:$scope.act},<span class="fstat-no" title="function not covered" >function(succ){</span></span>
+<span class="cstat-no" title="statement not covered" >                  if(succ.code==0){</span>
+<span class="cstat-no" title="statement not covered" >                      $scope.addSuccess=true;</span>
+                  }else{
+<span class="cstat-no" title="statement not covered" >                       $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                       $rootScope.errorMassage="查询出错";</span>
+                  }
+              },<span class="fstat-no" title="function not covered" >function(error){</span>
+<span class="cstat-no" title="statement not covered" >                  $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                  $rootScope.errorMassage="请求异常";</span>
+              });
+          }
+&nbsp;
+	 };
+     /**
+      *@method uploadImg - upload img for directive use
+     */
+     $scope.uploadImg=<span class="fstat-no" title="function not covered" >function(data){</span>
+<span class="cstat-no" title="statement not covered" >             loginService.uploadImg({imgBase64:data},<span class="fstat-no" title="function not covered" >function(succ){</span></span>
+<span class="cstat-no" title="statement not covered" >                  if(succ.code==0){</span>
+<span class="cstat-no" title="statement not covered" >                      $scope.act.img=succ.data;</span>
+                  }else{
+<span class="cstat-no" title="statement not covered" >                      $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                      $rootScope.errorMassage="查询出错";</span>
+                  }
+              },<span class="fstat-no" title="function not covered" >function(error){</span>
+<span class="cstat-no" title="statement not covered" >                  $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                  $rootScope.errorMassage="请求异常";</span>
+              });
+     };
+&nbsp;
+}]);
+  /**
+ * @class js.modules.myAppCtrl.myAppCtrllistCtrl - This controls get activity list
+ * @param {Object} $scope - The current scope
+ * @param {Object} loginService - The service
+ * @param {Object} $location
+ * @param {Object} $window
+ * @example &lt;div ng-controller="listCtrl"&gt;&lt;/div&gt;
+ */
+myAppCtrl.controller('listCtrl',['$scope','loginService','$location','$window',function($scope,loginService,$location,$window){		
+        /**
+        *@desc 列表页面字段
+        */
+        $scope.page={currentPage:1,totalPage:1,pageSize:5,endPage:1,totalNum:0,pages:[]};
+        /**
+        *@desc 是否搜索
+        */
+        $scope.search=true;
+        /**
+        *@method get total page
+        */
+          loginService.total(function(succ){
+              <span class="missing-if-branch" title="else path not taken" >E</span>if(succ.code==0){
+                      var data=succ.data;
+                      $scope.page.totalNum=Number(data[0].value);
+                      $scope.page.totalPage=Math.ceil(Number(data[0].value) / Number($scope.page.pageSize));
+                      $scope.page.endPage=$scope.page.totalPage;
+                      $scope.load();
+              }else{
+<span class="cstat-no" title="statement not covered" >                  $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                  $rootScope.errorMassage="查询出错";</span>
+              }
+          },<span class="fstat-no" title="function not covered" >function(error){</span>
+<span class="cstat-no" title="statement not covered" >              $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >              $rootScope.errorMassage="请求异常";</span>
+          });
+        /**
+        *@method load page list
+        *@desc load a page
+        */
+        $scope.load=function(){
+            loginService.list({currentPage:$scope.page.currentPage,pageSize:$scope.page.pageSize},function(succ){
+                  <span class="missing-if-branch" title="else path not taken" >E</span>if(succ.code==0){
+                       var data=succ.data;
+                       $scope.acts=data;
+                       /*生成数字链接*/
+                        <span class="missing-if-branch" title="if path not taken" >I</span>if ($scope.page.currentPage &gt; 1 &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >$scope.page.currentPage &lt; $scope.page.totalPage)</span> {
+<span class="cstat-no" title="statement not covered" >                                $scope.page.pages = [</span>
+                                    $scope.page.currentPage - 1,
+                                    $scope.page.currentPage,
+                                    $scope.page.currentPage + 1
+                                ];
+                            } else <span class="missing-if-branch" title="if path not taken" >I</span>if ($scope.page.currentPage == 1 &amp;&amp; $scope.page.totalPage &gt; 1) {
+<span class="cstat-no" title="statement not covered" >                                $scope.page.pages = [</span>
+                                    $scope.page.currentPage,
+                                    $scope.page.currentPage + 1
+                                ];
+                            } else <span class="missing-if-branch" title="if path not taken" >I</span>if ($scope.page.currentPage == $scope.page.totalPage &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >$scope.page.totalPage &gt; 1)</span> {
+<span class="cstat-no" title="statement not covered" >                                $scope.page.pages = [</span>
+                                    $scope.page.currentPage - 1,
+                                    $scope.page.currentPage
+                                ];
+                              }
+                  }else{
+<span class="cstat-no" title="statement not covered" >                      $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                      $rootScope.errorMassage="查询出错";</span>
+                  }
+            },<span class="fstat-no" title="function not covered" >function(error){</span>
+<span class="cstat-no" title="statement not covered" >                $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                  $rootScope.errorMassage="请求异常";</span>
+            });
+        };
+        
+        /**
+        *@method 
+        *@desc next a page 
+        */
+        $scope.next=<span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >              if($scope.page.currentPage &lt; $scope.page.totalPage){</span>
+<span class="cstat-no" title="statement not covered" >                  $scope.page.currentPage++;</span>
+<span class="cstat-no" title="statement not covered" >                  $scope.load();</span>
+              }
+        };
+        /**
+        *@method  
+        *@desc previous a page
+        */
+        $scope.prev = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >            if ($scope.page.currentPage &gt; 1) {</span>
+<span class="cstat-no" title="statement not covered" >                $scope.page.currentPage--;</span>
+<span class="cstat-no" title="statement not covered" >                $scope.load();</span>
+            }
+        };
+        /**
+        *@method   loadPage click number get a page
+        *@param {number} index -the acticity tip in acticity list
+        *@desc 页面按钮第几页点击  
+        */
+        $scope.loadPage = <span class="fstat-no" title="function not covered" >function (page) {</span>
+<span class="cstat-no" title="statement not covered" >            $scope.page.currentPage = page;</span>
+<span class="cstat-no" title="statement not covered" >            $scope.load();</span>
+        };
+        /**
+        *@method edit - edit a activity
+        *@param {number} index -the acticity tip in acticity list
+        *@param {number} id - The activity id
+        *@desc 编辑按钮点击
+        */
+    		$scope.edit=<span class="fstat-no" title="function not covered" >function(index,id){</span>
+<span class="cstat-no" title="statement not covered" >                 $location.path('/add').search({id: id});</span>
+    		};
+        /**
+        *@method delete - delete a activity
+        *@param {number} index -the acticity tip in acticity list
+        *@param {number} id - The activity id
+        *@desc 删除按钮点击
+        */
+    		$scope.delete=<span class="fstat-no" title="function not covered" >function(index,id){</span>
+<span class="cstat-no" title="statement not covered" >    			       $scope.addSuccess=false;</span>
+<span class="cstat-no" title="statement not covered" >                  loginService.deleteActivity({id:id},<span class="fstat-no" title="function not covered" >function(succ){</span></span>
+<span class="cstat-no" title="statement not covered" >                      if(succ.code==0){</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.acts.splice(index,1);</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.addSuccess=true;</span>
+<span class="cstat-no" title="statement not covered" >                            $scope.page.totalNum--;</span>
+<span class="cstat-no" title="statement not covered" >                            var newTotal=Math.ceil($scope.page.totalNum / Number($scope.page.pageSize));</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                            if($scope.page.currentPage == $scope.page.totalPage &amp;&amp; $scope.page.totalPage &gt; newTotal){</span>
+<span class="cstat-no" title="statement not covered" >                                  $scope.page.currentPage--;</span>
+<span class="cstat-no" title="statement not covered" >                                  $scope.page.totalPage=newTotal;</span>
+                            }
+<span class="cstat-no" title="statement not covered" >                             $scope.load();</span>
+                      }else{
+<span class="cstat-no" title="statement not covered" >                          $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                          $rootScope.errorMassage="查询出错";</span>
+                      }
+                  },<span class="fstat-no" title="function not covered" >function(error){</span>
+<span class="cstat-no" title="statement not covered" >                      $rootScope.error=true;</span>
+<span class="cstat-no" title="statement not covered" >                      $rootScope.errorMassage="请求异常";</span>
+                  });
+    		};
+        /**
+        *@method share - share a activity
+        *@param {number} index  -the acticity tip in acticity list
+        *@param {number} id - The activity id
+        *@desc 分享按钮点击
+        */
+        $scope.share=<span class="fstat-no" title="function not covered" >function(index,id){</span>
+<span class="cstat-no" title="statement not covered" >               $window.location.href="/users/shareActivity?id="+id+"";</span>
+        }
+&nbsp;
+}]);
+&nbsp;
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 07 2015 16:58:28 GMT+0800 (中国标准时间)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

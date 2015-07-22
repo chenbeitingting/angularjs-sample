@@ -1,0 +1,118 @@
+
+   <section id="addActivity">
+               <form class="form-horizontal" name="activity" ng-submit="addActivity()" novalidate>
+                  <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">活动名称<label>*</label></label>
+                        <div class="col-sm-10">
+                           <input type="text" name="name" ng-model="act.name" class="form-control" placeholder="活动名称" required  ng-minlength=3 ng-maxlength=20>
+                           <p class="error" 
+                    ng-show="activity.name.$dirty && activity.name.$invalid">
+                              <small class="error" 
+                                  ng-show="activity.name.$error.required">
+                                  act name is required.
+                              </small>
+                              <small class="error" ng-show="activity.name.$error.minlength">
+                                act name is required to be at least 3 characters
+                              </small>
+                              <small class="error" ng-show="activity.name.$error.maxlength">
+                                act name cannot be longer than 20 characters
+                              </small>
+                           </p>
+                        </div>
+                  </div>
+                 <div class="form-group">
+                        <label class="col-sm-2 control-label">活动图片<label>*</label></label>
+                        <div class="col-sm-10">
+                           <div file-uploader></div>
+                      
+                           <p class="error" 
+                    ng-show="activity.img.$dirty && activity.img.$invalid">
+                              <small class="error" 
+                                  ng-show="activity.img.$error.required">
+                                  act price is required.
+                              </small>
+                           </p> 
+                        </div>
+                  </div>
+                  <div class="form-group">
+                        <label class="col-sm-2 control-label">活动时间<label>&nbsp;</label></label>
+                        <div class="col-sm-10">
+                            <input type="text" ng-model="act.startTime" name="startTime" class="form-control dateInput" start-picker>&nbsp;&nbsp---
+                            <input type="text" ng-model="act.endTime" name="endTime" class="form-control  dateInput" start-picker>
+                        </div>
+                  </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">活动票价<label>*</label></label>
+                        <div class="col-sm-10">
+                           <input type="text" ng-model="act.price" name="price" class="form-control" placeholder="活动票价" required ng-pattern="/^[0-9]*$/">元
+                             <p class="error" 
+                    ng-show="activity.price.$dirty && activity.price.$invalid">
+                              <small class="error" 
+                                  ng-show="activity.price.$error.required">
+                                  act price is required.
+                              </small>
+                               <small class="error" 
+                                  ng-show="activity.price.$error.pattern">
+                                  act price must number
+                              </small>
+                           </p>
+                        </div>
+                  </div>
+                  <div class="form-group">
+                        <label class="col-sm-2 control-label">活动地址<label>*</label></label>
+                        <div class="col-sm-10">
+                           <input type="text" ng-model="act.address" name="address" class="form-control" placeholder="活动地址" required>
+                        </div>
+                          <p class="error" 
+                    ng-show="activity.address.$dirty && activity.address.$invalid">
+                              <small class="error" 
+                                  ng-show="activity.address.$error.pattern">
+                                  telephone  must number.
+                              </small>
+                           </p>
+                  </div>
+                  <div class="form-group">
+                        <label class="col-sm-2 control-label">咨询电话<label>&nbsp;</label></label>
+                        <div class="col-sm-10">
+                           <input type="text" ng-model="act.telephone" name="telephone" class="form-control" placeholder="咨询电话" ng-pattern="/^[0-9]*$/">
+                        </div>
+                          <p class="error" 
+                    ng-show="activity.telephone.$dirty && activity.telephone.$invalid">
+                              <small class="error" 
+                                  ng-show="activity.telephone.$error.required">
+                                  address is required.
+                              </small>
+                           </p>
+                  </div>
+                   <div class="form-group">
+                        <label class="col-sm-2 control-label">活动详情<label>*</label></label>
+                        <div class="col-sm-10">
+                           <textarea placeholder="活动详情" ng-model="act.activityInfo" required name="activityInfo" ng-minlength=10>
+                               
+                           </textarea>
+                           <p class="error" 
+                    ng-show="activity.activityInfo.$dirty && activity.activityInfo.$invalid">
+                              <small class="error" 
+                                  ng-show="activity.activityInfo.$error.required">
+                                  act information is required.
+                              </small>
+                              <small class="error" ng-show="activity.activityInfo.$error.minlength">
+                                act name cannot be longer than 200 characters
+                              </small>
+                           </p>
+                        </div>
+                  </div>
+                  <div class="form-group">
+                        <label class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10 clo-sm-btn">
+                           <div>
+                              <button type="button" class="btn btn-default">取消</button>
+                              <button type="submit" class="btn btn-info" id="btn-info"  ng-disabled="activity.$invalid" >确认</button>
+                           </div>
+                        </div>
+                  </div>
+                </form>
+               
+                <div show-success some-attr="{{addSuccess}}"></div>
+                <div id="tip" class="succ"  ng-class="{'succshow': addSuccess}" >操作成功</div>
+            </section>
